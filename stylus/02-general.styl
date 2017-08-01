@@ -1,0 +1,392 @@
+//---------------------------------------------------------------------
+// ESTILOS GENERALES
+//---------------------------------------------------------------------
+
+html
+	font-size 16px
+	height 100%
+	font-family $font_sans
+
+body
+	color $color_text
+	font-weight 300
+	tama_letra(1.7)
+	line-height 1.8em
+
+*
+	box-sizing border-box
+
+*:focus
+	outline none
+
+//---------------------------------------------------------------------
+// ENCABEZADOS
+//---------------------------------------------------------------------
+h1
+	font-size 2.5em
+	font-weight 300
+	text-transform uppercase
+
+h2
+	font-size 1.3em
+	font-weight 700
+	text-transform uppercase
+	color $color_primary
+
+h3
+	font-size 1.4em
+	font-weight 300
+
+h4
+	font-size 1em
+	font-weight 700
+
+h5
+	font-size 1em
+	font-weight 300
+	font-style italic
+
+h6
+	font-size 0.7em
+	font-weight 300
+	text-transform uppercase
+	
+h1
+h2
+h3
+h4
+h5
+h6
+	margin 0 0 1em 0
+	line-height 1.3em
+
+//---------------------------------------------------------------------
+// ELEMENTOS
+//---------------------------------------------------------------------
+
+p
+	margin 0 0 1.7em 0
+
+	&:first-child
+		margin-top 0
+
+	&:last-child
+		margin-bottom 0
+
+a
+	color $color_primary
+	text-decoration none
+	transicion()
+
+	&:hover
+		text-decoration underline
+
+img
+	display inline-block
+	max-width 100%
+	height auto
+
+figure
+	margin 0
+	padding 0
+
+pre
+	padding 2em
+	background $color_light_grey
+
+table
+	width 100%
+
+	th
+		background $color_light_grey
+		padding 0.5em
+		border-right 0.0625rem solid white
+
+	td
+		border-bottom solid 0.0625rem  darken($color_light_grey, 20%)
+		padding 0.5em
+
+blockquote
+	font-style italic
+	font-weight 400
+	margin 0
+	color lighten($color_text, 20%)
+	text-align center
+	font-size 1.2em
+	line-height 1.5em
+	padding 1em 0
+
+hr
+	content " "
+	display block
+	width 4em
+	height 0.0625rem
+	border 0
+	border-top solid 0.0625rem darken($color_light_grey, 10%)
+	margin 2em 0
+	clear both
+
+	&.center
+		margin-left auto
+		margin-right auto
+
+.text-center
+	text-align center
+
+video, object, embed, iframe
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+
+fieldset
+	padding 0
+	margin 0
+	border none
+	
+.btn
+	padding 0.5em 1.5em
+	background $color_primary
+	redondear(10em)
+	display inline-block
+	color white
+	
+	&:hover
+		background darken($color_primary, 15%)
+		text-decoration none
+		
+	&.btn-light
+		background white
+		border solid 0.0625rem darken($color_light_grey, 10%)
+		color $color_text
+		
+		&:hover
+			background $color_light_grey
+			
+.alerta
+	background lighten(tomato, 35%)
+	color tomato
+	padding 1em 2em
+	redondear(0.5em)
+	border solid 1rem * 0.0625 tomato
+	margin-bottom 1em
+	
+//---------------------------------------------------------------------
+// ALINEACION y COLUMNAS
+//---------------------------------------------------------------------
+
+.fl
+	float left
+
+.fr
+	float right
+
+.cf:before
+.cf:after
+	content " "
+	display table
+
+.cf:after
+	clear both
+
+.cf
+	*zoom 1
+
+.cols
+	text-align left
+
+	&.text-center
+		text-align center
+
+	.col2
+		float left
+		width 48%
+		margin-right 4%
+		margin-bottom 3em
+
+		&:nth-child(2n)
+			margin-right 0
+
+		&:nth-child(2n+3)
+			clear left
+
+	.col3
+		float left
+		width 30%
+		margin-right 5%
+		margin-bottom 3em
+
+		&:nth-child(3n)
+			margin-right 0
+
+		&:nth-child(3n+4)
+			clear left
+
+	.col3x2
+		float right
+		width 65%
+		clear right
+		margin-bottom 3em
+
+	.col3-alt
+		width 30%
+		margin 0 2% 3em 2%
+		display inline-block
+		vertical-align top
+
+		&:first-child
+			margin-left 0
+
+		&:nth-child(3n)
+			margin-right 0
+
+		&:nth-child(3n+4)
+			margin-left 0
+			clear left
+
+	.col4
+		float left
+		width 21.25%
+		margin-right 5%
+		margin-bottom 3em
+
+		&:nth-child(4n)
+			margin-right 0
+
+		&:nth-child(4n+5)
+			clear left
+
+.cols:before
+.cols:after
+	content " "
+	display table
+
+.cols:after
+	clear both
+
+.cols
+	*zoom 1
+
+//---------------------------------------------------------------------
+// WORDPRESS CLASSES
+//---------------------------------------------------------------------
+
+.alignleft
+	float left
+	margin 0 1em 0.5em 0
+	max-width 50%
+
+.alignright
+	float right
+	margin 0 0 0.5em 1em
+	max-width 50%
+
+.aligncenter
+	display block
+	margin 1.5em auto
+
+.gallery-caption
+.wp-caption-text
+	margin 0 0 0.5em 0
+	font-size 0.8em
+	text-align center
+	font-style italic
+	color lighten($color_text, 35%)
+
+.wp-caption
+	max-width 100%
+
+.bypostauthor
+	background lighten($color_light_grey, 3%)
+
+.instagram-media
+	margin-left auto !important
+	margin-right auto !important
+
+.sticky
+	background lighten($color_light_grey, 3%)
+
+/* Text meant only for screen readers. */
+.screen-reader-text
+	clip rect(1px, 1px, 1px, 1px)
+	position absolute !important
+	white-space nowrap
+	height 1px
+	width 1px
+	overflow hidden
+
+.screen-reader-text:focus
+	background-color #f1f1f1
+	border-radius 3px
+	box-shadow 0 0 2px 2px rgba(0, 0, 0, 0.6)
+	clip auto !important
+	color #21759b
+	display block
+	font-size 14px
+	font-size 0.875rem
+	font-weight bold
+	height auto
+	left 5px
+	line-height normal
+	padding 15px 23px 14px
+	text-decoration none
+	top 5px
+	width auto
+	z-index 100000 /* Above WP toolbar. */
+
+//---------------------------------------------------------------------
+// LAYOUT
+//---------------------------------------------------------------------
+
+.container
+	width 90%
+	max-width 75rem
+	margin-left auto
+	margin-right auto
+
+//---------------------------------------------------------------------
+// RESPONSIVE
+//---------------------------------------------------------------------
+
+@media only screen and (max-width: 29.8rem)
+
+	.alignleft
+	.alignright
+		float none
+		display block
+		margin 25px auto
+		max-width 100%
+		width 100%
+
+	.cols .col3
+	.cols .col4
+	.cols .col3x2
+		float none
+		margin-right 0
+		width 100%
+
+
+@media only screen and (max-width: 35.6rem)
+
+	body
+		tama_letra(1.6)
+		line-height 1.8em
+
+	p
+		margin 1.5em 0
+
+	blockquote
+		font-size 1.2em
+		padding 1.3em 0
+		
+		.alignleft
+			float left
+
+	.alignleft
+	.alignright
+		float none
+		display block
+		margin 25px auto
+		max-width 100%
+		width 100%

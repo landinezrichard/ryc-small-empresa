@@ -1,0 +1,164 @@
+//---------------------------------------------------------------------
+// STANDARD PAGE
+//---------------------------------------------------------------------
+.page-header
+	background $color_text
+	padding 3em 0
+	color white
+	text-align center
+	
+	h1
+		margin 0 0 0.7em 0
+	
+	p
+		font-size 1.2em
+		line-height 1.5em
+
+.container.page-content
+	max-width 46.25rem
+
+.container.page-content
+.container.list-content
+	margin-top 4em
+	margin-bottom 4em
+	
+//---------------------------------------------------------------------
+// HOME
+//---------------------------------------------------------------------
+#hero-container
+	background $color_light_grey
+	border-bottom solid 0.0625rem darken($color_light_grey, 10%)
+	border-top solid 0.0625rem darken($color_light_grey, 10%)
+	padding 5em 0 8em 0
+	position relative
+
+#hero
+	// padding-right 55%
+	padding-right 38%
+	
+	.dispositivos
+		background url(img/home-dispositivos.png) left center no-repeat
+		position absolute
+		right 0
+		top 0
+		width 55%
+		height 100%
+		
+		img
+			display none
+	
+	h2
+		color $color_text
+		font-weight 300
+		font-size 2.5em
+		text-transform none
+		margin 0
+	
+	p
+		margin 1em 0
+		
+//---------------------------------------------------------------------
+// SERVICIOS
+//---------------------------------------------------------------------
+.detalle-servicio
+	display table
+	margin-bottom 3em
+	
+	.icono
+	.text
+		display table-cell
+		vertical-align top
+	
+	.icono
+		width 12rem
+
+.servicio-resumen
+	text-align center
+	
+	.icono
+		display block
+		
+		.icono-servicio
+			margin 0 auto
+	
+	h2
+		margin-top 1em
+
+#servicios-home
+	padding 4em 0
+
+.icono-servicio
+	width 10rem
+	height 10rem
+	line-height 10rem
+	redondear(10rem)
+	background $color_light_grey
+	border solid 0.0625rem darken($color_light_grey, 10%)
+	text-align center
+	
+	img
+		vertical-align middle
+		
+//---------------------------------------------------------------------
+// PORTAFOLIO
+//---------------------------------------------------------------------
+
+.portafolio-resumen
+	text-align center
+	
+	h2
+		margin 1em 0 0.5em 0
+	
+	p
+		margin 0 0 1em 0
+
+.portafolio-detalle
+	.page-header
+		padding 3em 0 18em 0
+		margin-bottom -15em
+	
+	.imagen-destacada
+		margin-bottom 1.5em
+
+	.container.page-content
+		margin-top 0
+		
+//---------------------------------------------------------------------
+// RESPONSIVE
+//---------------------------------------------------------------------
+
+@media only screen and (max-width: 33.125rem)
+	.detalle-servicio
+		display block
+		
+		.icono
+		.text
+			display block
+			text-align center
+			width 100%
+		
+		.icono-servicio
+			margin 0 auto 1em auto
+
+@media only screen and (max-width: 45.625rem)
+
+	#hero
+		padding-right 0
+		
+		.dispositivos
+			background none
+			position static
+			width 100%
+			height auto
+			
+			img
+				display block
+				margin 0 auto 1em auto
+
+@media only screen and (max-width: 61.25rem)
+
+	#hero
+		padding-right 40%
+		
+		.dispositivos
+			width 40%

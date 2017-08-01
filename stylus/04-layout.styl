@@ -1,0 +1,290 @@
+//---------------------------------------------------------------------
+// HEADER
+//---------------------------------------------------------------------
+#main-header
+	display table
+	
+	.menu-trigger
+		display none
+		
+.logo-header
+	display table-cell
+	width 27%
+	padding 1.5em 0
+	
+	.logo
+	.slogan
+		margin 0
+		display block
+		
+	.logo
+		font-size 2.5em
+		line-height 1.2em
+		
+	.slogan
+		font-size 0.7em
+		text-align center
+		font-weight 300
+		text-transform uppercase
+		line-height 1.2em
+		
+	&:hover
+		text-decoration none
+		
+#main-menu
+	display table-cell
+	width 73%
+	text-align right
+	vertical-align middle
+	line-height 1.3em
+	
+	ul
+	li
+		resetear()
+		
+	ul
+		li
+			display inline-block
+
+			a
+				display block
+				padding 0.5em 1.5em
+				background transparent
+				redondear(10em)
+				color $color_text
+				
+				&:hover
+					background $color_light_grey
+					text-decoration none
+					
+			&.featured
+				a
+					background $color_primary
+					color white
+					
+					&:hover
+						background darken($color_primary, 15%)
+
+//---------------------------------------------------------------------
+// CONTENT
+//---------------------------------------------------------------------
+.contenido-izq
+	width 70%
+	float left
+
+.sidebar-right
+	width 25%
+	float right
+
+//---------------------------------------------------------------------
+// FOOTER
+//---------------------------------------------------------------------
+#main-footer
+	border-top solid 0.125rem $color_dark
+	
+.footer-call-to-action
+	text-align center
+	background $color_dark
+	color white
+	padding 3em 0
+	
+	.btn
+		margin-left 1em
+		
+#bottom-footer
+	display table
+	
+	.copyright
+	#footer-menu
+		display table-cell
+		width 50%
+		padding 2em 0
+		
+#footer-menu
+	text-align right
+	
+	ul
+	li
+		resetear()
+		
+	ul
+		li
+			display inline-block
+			
+			&::before
+				content "/"
+				padding 0 0.7em
+				
+			a
+				color $color_text
+
+//---------------------------------------------------------------------
+// TESTIMONIOS
+//---------------------------------------------------------------------
+
+#testimonios-area
+	background $color_text
+	color white
+	padding 4em 0
+	position relative
+	
+	.container
+		padding 0 6em
+		
+	.flex-direction-nav
+		resetear()
+		position absolute
+		top 45%
+		width 100%
+		left 0
+		height 32rem * 0.0625
+		
+		a
+			width 32rem * 0.0625
+			height 32rem * 0.0625
+			overflow hidden
+			text-indent -999px
+			display block
+			position absolute
+			top 0
+			
+			&.flex-prev
+				left 1em
+				background url(img/arrow-left.svg) left center no-repeat
+				
+			&.flex-next
+				right 1em
+				background url(img/arrow-right.svg) right center no-repeat
+				
+.testimonio
+	padding 0
+	
+	&::before
+		content "\201C"
+		display block
+		text-align center
+		font-size 5em
+		font-family $font_serif
+		opacity 0.3
+		line-height 1em
+		margin-bottom -0.5em
+		
+	blockquote
+		color white
+		
+	cite
+		max-width 22rem
+		margin 0 auto
+		display block
+		text-align left
+		font-size 0.75em
+		line-height 1.3em
+		font-style normal
+		font-weight 300
+		
+		strong
+			font-weight 900
+			display block
+			padding-top 0.5em
+			
+		img
+			redondear(10em)
+			border solid 0.125rem white
+	
+//---------------------------------------------------------------------
+// RESPONSIVE
+//---------------------------------------------------------------------
+
+@media only screen and (max-width: 30rem)
+
+	#testimonios-area
+		.container
+			padding 0 2em
+
+	.testimonio
+		cite
+			text-align center
+			
+			img
+				float none
+				margin 0 auto
+
+@media only screen and (max-width: 45rem)
+	
+	#testimonios-area
+		.container
+			padding 0 3em
+
+@media only screen and (max-width: 46.25rem)
+
+	#main-header
+		display block
+		
+		.menu-trigger
+			display block
+			float right
+			padding 2.5em 1em 1em 1em
+			cursor pointer
+			width 20%
+			text-align right
+	
+	.logo-header
+		width 80%
+		float left
+		display block
+		text-align left
+		
+		.slogan
+			text-align left
+			
+	#main-menu
+		width 100%
+		clear both
+		text-align center
+		background $color_light_grey
+		border solid 0.0625rem darken($color_light_grey, 10%)
+		padding 0.5em
+		margin-bottom 2em
+		
+		&.open
+			display block
+			
+		&.closed
+			display none
+			
+		ul
+			li
+				display block
+				width 100%
+				
+				a
+					padding 0.5em 1em
+					
+					&:hover
+						background darken($color_light_grey, 10%)
+
+@media only screen and (max-width: 53.125rem)
+
+	.logo-header
+		width 35%
+		
+	#main-menu
+		width 65%
+		
+		ul
+			li
+				a
+					padding 0.5em 1em
+
+@media only screen and (max-width: 56.25rem)
+
+	#bottom-footer
+		display block
+		padding 1em 0
+		
+		.copyright
+		#footer-menu
+			display block
+			width 100%
+			padding 0.5em 0
+			text-align left

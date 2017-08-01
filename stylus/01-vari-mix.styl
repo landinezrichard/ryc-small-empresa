@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------
+// COLORES
+//---------------------------------------------------------------------
+
+$color_text = #7E89A3
+$color_text_dark = $color_dark
+
+$color_light_grey = #F6F6F8
+
+$color_primary = #50C5AB
+$color_secondary = $color_dark
+$color_dark = #282F40
+
+//---------------------------------------------------------------------
+// FUENTES
+//---------------------------------------------------------------------
+
+$font_serif = Georgia, 'Times new roman', serif
+$font_sans = 'Lato', Helvetica, Arial, sans-serif
+
+//---------------------------------------------------------------------
+// REM
+//---------------------------------------------------------------------
+$rem = 0.0625rem
+
+//---------------------------------------------------------------------
+// MIXINS
+//---------------------------------------------------------------------
+
+transicion(duracion = 0.3s)
+	transition all duracion linear
+
+redondear(radio = 0.3125rem)
+	border-radius radio
+
+resetear()
+	margin 0
+	padding 0
+	list-style none
+	background none
+
+tama_letra(size)
+	$remValue = size * 0.625
+	$pxValue = size * 10
+	font-size ($pxValue)px
+	font-size ($remValue)rem
+
+alto_linea(size)
+	$remValue = size * 0.625
+	$pxValue = size * 10
+	line-height ($pxValue)px
+	line-height ($remValue)rem

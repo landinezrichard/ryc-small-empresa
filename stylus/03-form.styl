@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------
+// FORMULARIO
+//---------------------------------------------------------------------
+
+input
+textarea
+	background $color_light_grey
+	border 0.0625rem solid darken($color_light_grey, 10%)
+	padding 1em
+	.transicion()
+	max-width 100%
+	width 100%
+	redondear(0.3rem)
+	color $color_text
+	display block
+	margin-bottom 1em
+	
+	&:focus
+		background white
+		outline none
+		border-color $color_primary
+
+textarea
+	width 100%
+
+input[type="submit"]
+input[type="button"]
+	background $color_primary
+	color white
+	border 0
+	display inline-block
+	width auto
+	line-height 1.5em
