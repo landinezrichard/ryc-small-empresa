@@ -86,6 +86,9 @@
 
 	add_action('init','ryc_add_excerpts_to_pages');
 
+
+	require_once('/metaboxes/meta_box.php');
+
 	/*Home Metaboxes*/
 	require_once('/functions/home-metaboxes.php');
 
@@ -93,7 +96,7 @@
 	require_once('/functions/servicios-metaboxes.php');
 
 	/*Proyectos Metaboxes*/
-	require_once('/metaboxes/meta_box.php');
+	
 
 	require_once('/functions/proyecto-metaboxes.php');
 

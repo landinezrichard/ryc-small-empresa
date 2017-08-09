@@ -3,7 +3,7 @@
  * Template name: Plantilla Servicios
  *
  * Esta es la plantilla para los Servicios
- * Descripción lasrga y detalle de los
+ * Descripción larga y detalle de los
  * 3 servicios.
  *
  * @author	Ricardo Landínez Ospino

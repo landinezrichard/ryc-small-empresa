@@ -16,6 +16,11 @@ $prefix = 'proyecto_metabox';
 
 $fields = array(
 	array( // Textarea
+		'label'	=> 'Sección 1', // <label>
+		'desc'	=> 'Ingresa la descripción del testimonio.', // description
+		'type'	=> 'section' // type of field
+	),
+	array( // Textarea
 		'label'	=> 'Testimonio texto', // <label>
 		'desc'	=> 'Ingresa la descripción del testimonio.', // description
 		'id'	=> $prefix.'text_testimonio', // field id and name
@@ -51,6 +56,7 @@ $fields = array(
  */
 $sample_box = new custom_add_meta_box( 'proyecto-details', 'Testimonio del proyecto', $fields, 'page', true );
 
+$sample_box->create_save_metabox();
 
 /*
 Mostrar los campos solo para las paginas hijas de portafolio 
