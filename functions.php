@@ -87,6 +87,7 @@
 	add_action('init','ryc_add_excerpts_to_pages');
 
 
+	//utilidad crear metaboxes
 	require_once('/metaboxes/meta_box.php');
 
 	/*Home Metaboxes*/
@@ -96,8 +97,6 @@
 	require_once('/functions/servicios-metaboxes.php');
 
 	/*Proyectos Metaboxes*/
-	
-
 	require_once('/functions/proyecto-metaboxes.php');
 
 ?>

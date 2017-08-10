@@ -37,12 +37,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	
 	$parrafo_destacado = get_post_meta( $post->ID, 'main_text', true);
 
-	$boton_1_post_id = get_post_meta( $post->ID, 'btn_link_1', true);
-	$enlace_boton_1 = get_the_permalink($boton_1_post_id);
+	// $boton_1_post_id = get_post_meta( $post->ID, 'btn_link_1', true);
+	$boton_1_post_id = get_post_meta( get_the_ID(), 'btn_link_1', true);
+	$enlace_boton_1 = get_the_permalink($boton_1_post_id[0]);
 	$texto_boton_1 = get_post_meta( $post->ID, 'btn_text_1', true);
 
 	$boton_2_post_id = get_post_meta( $post->ID, 'btn_link_2', true);
-	$enlace_boton_2 = get_the_permalink($boton_2_post_id);
+	$enlace_boton_2 = get_the_permalink($boton_2_post_id[0]);
 	$texto_boton_2 = get_post_meta( $post->ID, 'btn_text_2', true);
 
 	//---------------------------------------------------------------------
@@ -66,7 +67,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 	$texto_boton_servicios = get_post_meta( $post->ID, 'btn_text_servicios', true);
 	$boton_servicios = get_post_meta( $post->ID, 'btn_link_servicios', true);
-	$link_boton_servicios = get_the_permalink($boton_servicios);
+	$link_boton_servicios = get_the_permalink($boton_servicios[0]);
 
 	//---------------------------------------------------------------------
 	// ZONA TESTIMONIOS
@@ -108,7 +109,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 				<?php endif; ?>
 				
 				<?php if( $enlace_boton_1 && $texto_boton_1 ): ?>
-					<a href="<?php echo $enlace_boton_1 ?>" class="btn"><?php echo $texto_boton_1; ?></a> 
+					<a href="<?php echo $enlace_boton_1 ?>" class="btn"><?php echo $texto_boton_1; ?></a>
 				<?php endif; ?>
 				
 				<?php if( $enlace_boton_2 && $texto_boton_2 ): ?>
