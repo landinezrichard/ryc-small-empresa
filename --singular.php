@@ -78,7 +78,7 @@ get_header();
 
 			</section><!-- /.contenido-izq -->
 			
-			<?php get_sidebar(); ?>
+			<?php //get_sidebar(); ?>
 		
 		</div><!-- /.container -->
 

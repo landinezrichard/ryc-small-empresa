@@ -92,7 +92,7 @@ get_header();
 		
 	</article><!-- /#single-page -->
 
-<?php endwhile; ?>
+
 </main><!-- /#content-area -->
 
 <?php if( $testimonio_texto && $testimonio_autor ){ /*?>
@@ -119,5 +119,7 @@ get_header();
 </aside><!-- /#testimonios-area -->
 
 <?php */} ?>
+
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
