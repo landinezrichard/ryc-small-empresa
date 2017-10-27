@@ -60,6 +60,45 @@
 			)
 		);
 
+		//Call to Action text
+		$wp_customize->add_setting('ryc_cta_text', array(
+			'default' => '¿Estás listo para comenzar con tu proyecto de diseño web? ',
+			'sanitize_callback' => 'wp_kses'
+		));
+
+		$wp_customize->add_control( 'ryc_cta_text', array(
+				'label' => __('Texto del área para el Call to Action', 'ryc'),
+				'section' => 'ryc_footer',
+				'settings' => 'ryc_cta_text'
+			)
+		);
+
+		//Call to Action btn text
+		$wp_customize->add_setting('ryc_cta_btn_text', array(
+			'default' => 'Trabajemos juntos',
+			'sanitize_callback' => 'wp_kses'
+		));
+
+		$wp_customize->add_control( 'ryc_cta_btn_text', array(
+				'label' => __('Texto del botón Call to Action', 'ryc'),
+				'section' => 'ryc_footer',
+				'settings' => 'ryc_cta_btn_text'
+			)
+		);
+
+		//Call to Action btn URL
+		$wp_customize->add_setting('ryc_cta_btn_url', array(
+			'default' => home_url('/contacto'),
+			'sanitize_callback' => 'esc_url'
+		));
+
+		$wp_customize->add_control( 'ryc_cta_btn_url', array(
+				'label' => __('URL del botón Call to Action', 'ryc'),
+				'section' => 'ryc_footer',
+				'settings' => 'ryc_cta_btn_url'
+			)
+		);
+
 	}
 
 	add_action('customize_register', 'ryc_customizer');
