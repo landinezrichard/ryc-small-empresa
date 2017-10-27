@@ -17,6 +17,9 @@
 		<?php _e('Categorías', 'ryc'); ?>: <?php the_category(', '); ?>
 	</div>
 
+	<?php
+	//Descomentar si se quiere ver la etiqueta, el autor y numero de comentarios
+	/*
 	<div class="tags"><?php the_tags(); ?></div>
 
 	<?php if( comments_open() || have_comments() ){ ?>
@@ -34,5 +37,8 @@
 	<?php } ?>
 
 	<div class="author"><?php _e('Por', 'ryc'); ?>: <?php the_author_posts_link(); ?></div>
+
+	*/
+	?>
 
 </div>

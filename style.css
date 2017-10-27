@@ -1094,6 +1094,25 @@ input[type="button"] {
   margin-top: 0;
 }
 
+.blogpost-title {
+  margin-bottom: 0;
+}
+
+.meta {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+.posts-navigation {
+  margin-bottom: 5em;
+}
+
+.posts-navigation a,
+.posts-navigation span {
+  display: inline-block;
+  padding: 0.5em;
+}
+
 @media only screen and (max-width: 61.25rem) {
   #hero {
     padding-right: 40%;

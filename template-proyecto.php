@@ -95,7 +95,7 @@ get_header();
 
 </main><!-- /#content-area -->
 
-<?php if( $testimonio_texto && $testimonio_autor ){ /*?>
+<?php if( $testimonio_texto && $testimonio_autor ){ ?>
 <aside id="testimonios-area">
 	
 	<div class="container testimonio">
@@ -118,7 +118,7 @@ get_header();
 	
 </aside><!-- /#testimonios-area -->
 
-<?php */} ?>
+<?php } ?>
 
 <?php endwhile; ?>
 
