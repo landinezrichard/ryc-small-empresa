@@ -36,7 +36,12 @@ $tab_1 = array(
 		'label' => __('Descripción Servicio 1', 'ryc'),
 		'desc' => __('Ingrese la descripción del servicio 1.', 'ryc'),
 		'id' => 'descripcion_servicio_1',
-		'type' => 'wysiwyg'
+		'type' => 'editor', //wysiwyg
+		'sanitizer' => 'wp_kses_post',
+		'settings' => array(
+			'media_buttons' => false,//quitamos la opcion de subir fotos
+			'teeny' => true//editor basico, sin tantas opciones
+		)
 	)
 );
 
@@ -63,7 +68,12 @@ $tab_2 = array(
 		'label' => __('Descripción Servicio 2', 'ryc'),
 		'desc' => __('Ingresa la descripción del servicio 2.', 'ryc'),
 		'id' => 'descripcion_servicio_2',
-		'type' => 'wysiwyg'
+		'type' => 'editor', //wysiwyg
+		'sanitizer' => 'wp_kses_post',
+		'settings' => array(
+			'media_buttons' => false,
+			'teeny' => true
+		)
 	)
 );
 
@@ -90,7 +100,12 @@ $tab_3 = array(
 		'label' => __('Descripción Servicio 3', 'ryc'),
 		'desc' => __('Ingresa la descripción del servicio 3.', 'ryc'),
 		'id' => 'descripcion_servicio_3',
-		'type' => 'wysiwyg'
+		'type' => 'editor', //wysiwyg
+		'sanitizer' => 'wp_kses_post',
+		'settings' => array(
+			'media_buttons' => false,
+			'teeny' => true
+		)
 	)
 );
 
